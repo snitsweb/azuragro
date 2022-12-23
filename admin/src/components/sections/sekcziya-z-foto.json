@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_sections_sekcziya_z_foto",
+  "info": {
+    "displayName": "Секція з фото",
+    "icon": "camera-retro"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Photo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

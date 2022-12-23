@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "produkts",
+  "info": {
+    "singularName": "produkt",
+    "pluralName": "produkts",
+    "displayName": "Продукт",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Subtitle": {
+      "type": "text"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "CEO": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page.seo"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Sections": {
+      "type": "dynamiczone",
+      "components": [
+        "sections.sekcziya-z-foto"
+      ]
+    },
+    "pidkategoriya": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::pidkategoriya.pidkategoriya",
+      "inversedBy": "produkts"
+    }
+  }
+}

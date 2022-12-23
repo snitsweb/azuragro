@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_page_seo",
+  "info": {
+    "displayName": "СЕО",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    }
+  }
+}
