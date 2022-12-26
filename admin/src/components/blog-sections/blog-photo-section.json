@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_blog_sections_blog_photo_sections",
+  "info": {
+    "displayName": "Секція з фото (Блог)",
+    "icon": "briefcase-medical",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}
