@@ -1,0 +1,64 @@
+.gallery_modal {
+
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.gallery_modal_inner {
+  transition: var(--base-transition);
+  background-color: var(--theme-primary-o50);
+  backdrop-filter: blur(10px);
+  z-index: var(--level-4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5vh 5vw;
+
+  &.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: .3s;
+  }
+
+  &.fadeOut {
+    animation-name: fadeOut;
+    animation-duration: .3s;
+  }
+}
+
+.gallery_close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.gallery_close_text {
+  transition: var(--base-transition);
+
+  &:hover {
+    transform: translateX(-1rem);
+  }
+}
