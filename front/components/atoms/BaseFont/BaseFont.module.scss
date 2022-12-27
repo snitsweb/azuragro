@@ -1,6 +1,6 @@
 @import "../../../utils/scss/index.scss";
 
-h1 {
+.h1 {
   font-size: 24px;
   line-height: 28px;
   font-weight: bold;
@@ -17,7 +17,7 @@ h1 {
   }
 }
 
-h2 {
+.h2 {
   font-size: 24px;
   line-height: 28px;
   font-weight: bold;
@@ -34,7 +34,7 @@ h2 {
   }
 }
 
-h3 {
+.h3 {
   font-size: 20px;
   line-height: 24px;
   font-weight: bold;
@@ -51,7 +51,7 @@ h3 {
   }
 }
 
-h4 {
+.h4 {
   font-size: 16px;
   line-height: 20px;
   font-weight: bold;
@@ -68,7 +68,7 @@ h4 {
   }
 }
 
-p, span {
+.p, .span {
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.003em;
