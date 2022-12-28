@@ -1,8 +1,8 @@
-interface IPagesData {
+export interface IPagesData {
 	layout: {
 		alias: string
 	},
-	pages: [
+	pages:
 		{
 			meta: {
 				name: string,
@@ -11,15 +11,13 @@ interface IPagesData {
 				description: string
 			},
 			value: {
-				sections: [
+				sections:
 					{
 						alias: string,
-						value: {}
-					}
-				]
+						value: any
+					}[]
 			}
-		}
-	]
+		}[]
 }
 
 export class PagesController {
@@ -31,11 +29,11 @@ export class PagesController {
 		this.init()
 	}
 
-	getByPath (path: string) {
+	getByPath(path: string) {
 		return this._pagesData.pages.find(page => page.meta.path === path)
 	}
 
-	get pagesData () {
+	get pagesData() {
 		return this._pagesData
 	}
 

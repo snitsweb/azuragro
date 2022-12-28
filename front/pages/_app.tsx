@@ -6,9 +6,9 @@ import {GlobalContextProvider} from '@context/GlobalContext'
 const app = new Application()
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <>
-      <GlobalContextProvider value={app}>
-        <Component {...pageProps} />
-      </GlobalContextProvider>
-    </>
+	return <>
+		<GlobalContextProvider value={app}>
+			<Component {...pageProps} />
+		</GlobalContextProvider>
+	</>
 }

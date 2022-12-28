@@ -1,4 +1,6 @@
-export function getDatabase () {
+import {IPagesData} from '@core/PagesController/PagesController'
+
+export function getDatabase ():IPagesData {
 	return {
 		layout: {
 			alias: 'theme-default'
