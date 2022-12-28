@@ -16,6 +16,10 @@ export class SectionsController {
         return this.#sections
     }
 
+    getByAlias(alias) {
+        return this.#sections.find(section => section.alias === alias)
+    }
+
     init() {
         this.readyToAddSections()
     }
