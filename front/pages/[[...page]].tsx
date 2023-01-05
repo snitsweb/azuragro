@@ -6,17 +6,24 @@ import {useRouter} from 'next/router'
 import {MultiSection} from '@components/organisms/MultiSection/MultiSection'
 
 function Page() {
-    const app = useContext<Application>(GlobalContext)
-    const router = useRouter()
-    const page = app.pagesController.getByPath(router.asPath ? router.asPath : '/')
-    return <>
-        <Head>
-            <title>Elo</title>
-        </Head>
-        <main>
-            {page ? <MultiSection sections={page.value.sections} /> : ''}
-        </main>
-    </>;
+	const app = useContext<Application>(GlobalContext)
+	const router = useRouter()
+	const page = app.pagesController.getByPath(router.asPath ? router.asPath : '/')
+	return <>
+		<Head>
+			<title>Elo</title>
+		</Head>
+		<main>
+			{page ? <MultiSection sections={page.value.sections} /> : ''}
+		</main>
+	</>
 }
 
-export default Page;
+export function getServerSideProps() {
+	const app = new Application()
+	return {
+		props: {}
+	}
+}
+
+export default Page
