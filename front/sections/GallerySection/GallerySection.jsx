@@ -1,4 +1,4 @@
-import BaseContainer from '../../components/atoms/BaseContainer/BaseContainer'
+import BaseContainer from '@components/atoms/BaseContainer/BaseContainer'
 import s from './GallerySection.module.scss'
 import GalleryItem from './components/GalleryItem/GalleryItem'
 

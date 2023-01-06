@@ -4,6 +4,8 @@ import {GlobalContext} from '@context/GlobalContext'
 import Application from '@core/Application'
 import {useRouter} from 'next/router'
 import {MultiSection} from '@components/organisms/MultiSection/MultiSection'
+import Footer from '@components/organisms/Footer/Footer'
+import Header from '@components/organisms/Header/Header'
 
 function Page() {
 	const app = useContext<Application>(GlobalContext)
@@ -13,9 +15,11 @@ function Page() {
 		<Head>
 			<title>Elo</title>
 		</Head>
+		<Header />
 		<main>
-			{page ? <MultiSection sections={page.value.sections} /> : ''}
+			{page ? <MultiSection sections={page.value.sections}/> : ''}
 		</main>
+		<Footer />
 	</>
 }
 

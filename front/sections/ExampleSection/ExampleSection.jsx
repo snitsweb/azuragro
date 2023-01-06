@@ -1,6 +1,6 @@
-import BaseContainer from '../../components/atoms/BaseContainer/BaseContainer'
+import BaseContainer from '@components/atoms/BaseContainer/BaseContainer'
 import s from './ExampleSection.module.scss'
-import BaseFont from '../../components/atoms/BaseFont/BaseFont'
+import BaseFont from '@components/atoms/BaseFont/BaseFont'
 
 const ExampleSection = ({value}) => {
 	return (

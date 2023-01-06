@@ -1,5 +1,5 @@
 import s from './GalleryModal.module.scss'
-import BaseFont from '../../../../components/atoms/BaseFont/BaseFont'
+import BaseFont from '@components/atoms/BaseFont/BaseFont'
 import {useEffect, useState} from 'react'
 
 const GalleryModal = ({children, isVisible=false, closeHandler}) => {
@@ -19,7 +19,7 @@ const GalleryModal = ({children, isVisible=false, closeHandler}) => {
 	return (
 		<div className={s.gallery_modal}>
 			{mounted && (
-				<div className={`${s.gallery_modal_inner} ${isVisible ? s.fadeIn : s.fadeOut} ${s[window.app.layout.alias]}`}>
+				<div className={`${s.gallery_modal_inner} ${isVisible ? s.fadeIn : s.fadeOut}`}>
 					{children}
 					<div
 						className={s.gallery_close}

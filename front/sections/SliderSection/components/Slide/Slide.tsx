@@ -1,7 +1,16 @@
 import s from './Slide.module.scss'
 import {SplideSlide} from '@splidejs/react-splide'
+import {FC} from 'react'
+import Image from 'next/image'
 
-const Slide = ({slide={}}) => {
+export interface ISlide {
+	slide: {
+		image: string,
+		alt: string,
+		title: string
+	}
+}
+const Slide: FC<ISlide> = ({slide}) => {
 	return (
 		<SplideSlide className={s.slide}>
 			<img

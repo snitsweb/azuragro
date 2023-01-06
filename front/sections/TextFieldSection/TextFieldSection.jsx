@@ -1,7 +1,7 @@
 import React from 'react'
 import s from './TextFieldSection.module.scss'
-import BaseContainer from '../../components/atoms/BaseContainer/BaseContainer'
-import BaseFont from '../../components/atoms/BaseFont/BaseFont'
+import BaseContainer from '@components/atoms/BaseContainer/BaseContainer'
+import BaseFont from '@components/atoms/BaseFont/BaseFont'
 
 const TextFieldSection = ({value}) => {
 	return (

@@ -1,5 +1,5 @@
 import s from './GalleryItem.module.scss'
-import BaseButton from '../../../../components/molecules/BaseButton/BaseButton'
+import BaseButton from '@components/molecules/BaseButton/BaseButton'
 import GalleryModal from '../GalleryModal/GalleryModal'
 import {useState} from 'react'
 

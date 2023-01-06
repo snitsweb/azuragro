@@ -1,10 +1,20 @@
-import BaseContainer from '../../components/atoms/BaseContainer/BaseContainer'
+import BaseContainer from '@components/atoms/BaseContainer/BaseContainer'
 import s from './SliderSection.module.scss'
 import '@splidejs/splide/css/core'
-import Slide from './components/Slide/Slide'
+import Slide from 'sections/SliderSection/components/Slide/Slide'
 import {Splide} from '@splidejs/react-splide'
+import {FC} from 'react'
 
-const SliderSection = ({value}) => {
+export interface ISliderSection {
+	value: {
+		slides: {
+			image: string,
+			alt: string,
+			title: string
+		}[]
+	}
+}
+const SliderSection: FC<ISliderSection> = ({value}) => {
 
 	// visit: https://splidejs.com/integration/react-splide/
 	const sliderOptions = {

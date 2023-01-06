@@ -1,8 +1,8 @@
 import React from 'react'
 import s from './JumbotronSection.module.scss'
-import BaseContainer from '../../components/atoms/BaseContainer/BaseContainer'
-import BaseFont from '../../components/atoms/BaseFont/BaseFont'
-import BaseButton from '../../components/molecules/BaseButton/BaseButton'
+import BaseContainer from '@components/atoms/BaseContainer/BaseContainer'
+import BaseFont from '@components/atoms/BaseFont/BaseFont'
+import BaseButton from '@components/molecules/BaseButton/BaseButton'
 const JumbotronSection = ({value}) => {
 	return (
 		<section className={s.jumbotron_section}>
