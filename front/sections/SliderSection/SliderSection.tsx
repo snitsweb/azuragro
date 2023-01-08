@@ -1,6 +1,6 @@
 import BaseContainer from '@components/atoms/BaseContainer/BaseContainer'
 import s from './SliderSection.module.scss'
-import '@splidejs/splide/css/core'
+import '@splidejs/splide/dist/css/splide.min.css'
 import Slide from 'sections/SliderSection/components/Slide/Slide'
 import {Splide} from '@splidejs/react-splide'
 import {FC} from 'react'

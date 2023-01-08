@@ -1,13 +1,18 @@
 import Head from 'next/head'
-import {useContext} from 'react'
+import {FC, useContext} from 'react'
 import {GlobalContext} from '@context/GlobalContext'
 import Application from '@core/Application'
 import {useRouter} from 'next/router'
 import {MultiSection} from '@components/organisms/MultiSection/MultiSection'
 import Footer from '@components/organisms/Footer/Footer'
 import Header from '@components/organisms/Header/Header'
+import {GetServerSideProps} from 'next'
+import {Page} from '@core/Types'
 
-function Page() {
+interface IPage {
+	serverSidePage: Page | undefined
+}
+const Page: FC<IPage> = ({serverSidePage}) => {
 	const app = useContext<Application>(GlobalContext)
 	const router = useRouter()
 	const page = app.pagesController.getByPath(router.asPath ? router.asPath : '/')
@@ -17,15 +22,31 @@ function Page() {
 		</Head>
 		<Header />
 		<main>
-			{page ? <MultiSection sections={page.value.sections}/> : ''}
+			{serverSidePage
+				? <MultiSection sections={serverSidePage.value.sections}/>
+				: <MultiSection sections={page ? page.value.sections : ''}/>
+			}
 		</main>
 		<Footer />
 	</>
 }
 
-export function getServerSideProps() {
+export const getServerSideProps: GetServerSideProps = async (context) => {
 	const app = new Application()
-	return {
+	const route = context.req.url
+	const page = app.pagesController.getByPath(route || '/')
+
+	console.log(route)
+	console.log(page)
+
+	if(page) {
+		return {
+			props: {
+				serverSidePage: page
+			}
+		}
+	}
+	return  {
 		props: {}
 	}
 }

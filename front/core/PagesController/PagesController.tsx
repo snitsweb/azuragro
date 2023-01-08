@@ -1,23 +1,11 @@
+import {Page} from '@core/Types'
+
 export interface IPagesData {
 	layout: {
 		alias: string
 	},
 	pages:
-		{
-			meta: {
-				name: string,
-				path: string,
-				title: string,
-				description: string
-			},
-			value: {
-				sections:
-					{
-						alias: string,
-						value: any
-					}[]
-			}
-		}[]
+		Page[]
 }
 
 export class PagesController {

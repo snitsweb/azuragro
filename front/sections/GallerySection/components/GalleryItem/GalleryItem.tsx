@@ -1,7 +1,7 @@
 import s from './GalleryItem.module.scss'
 import BaseButton from '@components/molecules/BaseButton/BaseButton'
 import GalleryModal from 'sections/GallerySection/components/GalleryModal/GalleryModal'
-import {FC, useState} from 'react'
+import {FC, MouseEvent, useState} from 'react'
 
 interface IGalleryItem {
 	image: string,
@@ -12,7 +12,7 @@ const GalleryItem: FC<IGalleryItem> = ({image, alt, title}) => {
 
 	const [isModalVisible, setIsModalVisible] = useState(false)
 
-	const handleButtonClick = (event) => {
+	const handleButtonClick = (event: MouseEvent) => {
 		event.preventDefault()
 		setIsModalVisible(!isModalVisible)
 	}

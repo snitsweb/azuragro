@@ -1,9 +1,9 @@
 import s from './BaseButton.module.scss'
-import {FC} from 'react'
+import {FC, MouseEvent} from 'react'
 
 interface IBaseButton {
 	text: string,
-	onClick?: () => void
+	onClick?: (event: MouseEvent) => void
 	className?: string
 	theme?: 'default' | 'secondary',
 	href?: string
