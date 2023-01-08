@@ -1,4 +1,3 @@
-import ExampleSection from '@sections/ExampleSection/ExampleSection'
 import SliderSection from '@sections/SliderSection/SliderSection'
 import GallerySection from '@sections/GallerySection/GallerySection'
 import JumbotronSection from '@sections/JumbotronSection/JumbotronSection'
@@ -25,7 +24,6 @@ export class SectionsController {
 	}
 
 	readyToAddSections () {
-    	this._sections.push(new Section('example_section', ExampleSection))
     	this._sections.push(new Section('slider_section', SliderSection))
     	this._sections.push(new Section('gallery_section', GallerySection))
     	this._sections.push(new Section('jumbotron_section', JumbotronSection))

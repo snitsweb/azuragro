@@ -3,9 +3,9 @@ import {FC} from 'react'
 
 interface IBaseButton {
 	text: string,
-	onClick: () => void
+	onClick?: () => void
 	className?: string
-	theme?: 'default' | 'dark',
+	theme?: 'default' | 'secondary',
 	href?: string
 }
 const BaseButton: FC<IBaseButton> = ({

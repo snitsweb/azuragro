@@ -1,9 +1,21 @@
-import React from 'react'
+import React, {FC} from 'react'
 import s from './JumbotronSection.module.scss'
 import BaseContainer from '@components/atoms/BaseContainer/BaseContainer'
 import BaseFont from '@components/atoms/BaseFont/BaseFont'
 import BaseButton from '@components/molecules/BaseButton/BaseButton'
-const JumbotronSection = ({value}) => {
+
+interface IJumbotronSection {
+	value: {
+		header: string,
+		description: string,
+		image: {
+			path: string,
+			alt: string,
+			title: string
+		}
+	}
+}
+const JumbotronSection: FC<IJumbotronSection> = ({value}) => {
 	return (
 		<section className={s.jumbotron_section}>
 			<BaseContainer>

@@ -1,9 +1,16 @@
-import React from 'react'
+import React, {FC} from 'react'
 import s from './TextFieldSection.module.scss'
 import BaseContainer from '@components/atoms/BaseContainer/BaseContainer'
 import BaseFont from '@components/atoms/BaseFont/BaseFont'
 
-const TextFieldSection = ({value}) => {
+interface ITextFieldSection {
+	value: {
+		header: string,
+		description: string
+	}
+}
+
+const TextFieldSection: FC<ITextFieldSection> = ({value}) => {
 	return (
 		<section className={s.textfield_section}>
 			<BaseContainer>

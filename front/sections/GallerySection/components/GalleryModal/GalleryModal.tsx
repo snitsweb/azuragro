@@ -1,8 +1,14 @@
 import s from './GalleryModal.module.scss'
 import BaseFont from '@components/atoms/BaseFont/BaseFont'
-import {useEffect, useState} from 'react'
+import {FC, ReactNode, useEffect, useState} from 'react'
 
-const GalleryModal = ({children, isVisible=false, closeHandler}) => {
+interface IGalleryModal {
+	children: ReactNode,
+	isVisible?: boolean,
+	closeHandler: () => void
+}
+
+const GalleryModal: FC<IGalleryModal> = ({children, isVisible=false, closeHandler}) => {
 
 	const [mounted, setMounted] = useState(isVisible)
 

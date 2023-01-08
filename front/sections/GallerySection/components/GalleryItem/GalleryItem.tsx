@@ -1,9 +1,14 @@
 import s from './GalleryItem.module.scss'
 import BaseButton from '@components/molecules/BaseButton/BaseButton'
-import GalleryModal from '../GalleryModal/GalleryModal'
-import {useState} from 'react'
+import GalleryModal from 'sections/GallerySection/components/GalleryModal/GalleryModal'
+import {FC, useState} from 'react'
 
-const GalleryItem = ({image, alt, title}) => {
+interface IGalleryItem {
+	image: string,
+	alt: string,
+	title: string
+}
+const GalleryItem: FC<IGalleryItem> = ({image, alt, title}) => {
 
 	const [isModalVisible, setIsModalVisible] = useState(false)
 

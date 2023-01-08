@@ -1,8 +1,19 @@
 import BaseContainer from '@components/atoms/BaseContainer/BaseContainer'
 import s from './GallerySection.module.scss'
-import GalleryItem from './components/GalleryItem/GalleryItem'
+import GalleryItem from 'sections/GallerySection/components/GalleryItem/GalleryItem'
+import {FC} from 'react'
 
-const GallerySection = ({value}) => {
+interface IGallerySection {
+	value: {
+		images: {
+			image: string,
+			alt: string,
+			title: string
+		}[]
+	}
+}
+
+const GallerySection: FC<IGallerySection> = ({value}) => {
 	return (
 		<section className={s.section}>
 			<BaseContainer>
