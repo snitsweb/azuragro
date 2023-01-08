@@ -36,9 +36,6 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 	const route = context.req.url
 	const page = app.pagesController.getByPath(route || '/')
 
-	console.log(route)
-	console.log(page)
-
 	if(page) {
 		return {
 			props: {
