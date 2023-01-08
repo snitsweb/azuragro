@@ -1,0 +1,3 @@
+#!/bin/bash
+
+(cd admin && npm run develop) | (cd front && npm run dev)

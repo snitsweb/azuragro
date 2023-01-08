@@ -1,2 +1,3 @@
-/.idea
+**/.idea
 /front/package-lock.json
+/front/.idea/modules.xml
